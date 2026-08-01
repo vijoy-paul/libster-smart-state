@@ -1,0 +1,24 @@
+# Source
+src/
+examples/
+.github/
+.vscode/
+.changeset/
+
+# Config files
+vite.config.ts
+tsup.config.ts
+tsconfig.json
+eslint.config.js
+.prettierrc
+.eslintignore
+
+# Tests
+*.test.*
+*.spec.*
+coverage/
+
+# Dev
+node_modules/
+.DS_Store
+*.log
