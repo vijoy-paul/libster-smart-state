@@ -2,16 +2,33 @@
 
 A production-ready React component that automatically renders the correct UI based on application state — loading, error, empty, offline, unauthorized, forbidden, not-found, maintenance, or success.
 
-[![npm version](https://badge.fury.io/js/@libster/smart-state.svg)](https://www.npmjs.com/package/@libster/smart-state)
+[![npm version](https://img.shields.io/npm/v/@libster/smart-state?color=cb3837&logo=npm&logoColor=white)](https://www.npmjs.com/package/@libster/smart-state)
 [![CI](https://github.com/vijoy-paul/libster-smart-state/actions/workflows/ci.yml/badge.svg)](https://github.com/vijoy-paul/libster-smart-state/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@libster/smart-state)](https://bundlephobia.com/package/@libster/smart-state)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node](https://img.shields.io/badge/Node-%3E%3D20-brightgreen?logo=node.js&logoColor=white)](https://nodejs.org)
+[![Bundle Size](https://img.shields.io/badge/minzipped-~7KB-blue)](https://bundlephobia.com/package/@libster/smart-state)
+
+---
+
+## Why
+
+Every data-fetching component ends up writing the same boilerplate:
+
+```tsx
+if (loading) return <Spinner />;
+if (error)   return <ErrorPage />;
+if (!data)   return <Empty />;
+return <Content />;
+```
+
+Multiply that by dozens of components, add offline detection, auth guards, and maintenance windows, and it becomes a maintenance burden. `SmartState` centralises all of it into a single declarative component with accessible defaults out of the box.
 
 ---
 
 ## Table of Contents
 
+- [Why](#why)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [How It Works](#how-it-works)
