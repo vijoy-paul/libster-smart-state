@@ -64,9 +64,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\"",
     "type-check": "tsc --noEmit",
-    "prepublishOnly": "npm run build && npm run test",
-    "release": "changeset publish",
-    "version": "changeset version"
+    "prepublishOnly": "npm run build && npm run test"
   },
   "overrides": {
     "esbuild": "^0.28.1"
@@ -79,7 +77,6 @@
     "node": ">=20.0.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
