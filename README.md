@@ -782,6 +782,9 @@ Yes. Each state is already wrapped in a `Suspense` boundary.
 **Is it SSR-compatible?**
 Yes. It renders correctly on the server and hydrates without mismatches.
 
+**Does it work with React 19?**
+Yes. Peer dependencies are `react >= 18` and `react-dom >= 18`, which includes React 19.
+
 **What counts as "empty"?**
 `null`, `undefined`, `""` (or whitespace), `[]`, `{}`, empty `Map`, empty `Set`.
 
@@ -797,6 +800,9 @@ Ensure `data` is also provided — `isEmpty` only runs when the `data` key is pr
 
 **TypeScript error on `data` type**
 Use the generic: `<SmartState<YourType[]> data={yourData}>`.
+
+**TypeScript error importing styles (`Cannot find module '@libster/smart-state/styles'`)**
+Ensure you're on `@libster/smart-state >= 1.0.1`. The styles subpath includes TypeScript declarations. Import it as a side effect: `import '@libster/smart-state/styles'`.
 
 **Styles not applying**
 Import `'@libster/smart-state/styles'` at the root of your app.

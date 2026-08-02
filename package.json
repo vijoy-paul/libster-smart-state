@@ -1,6 +1,6 @@
 {
   "name": "@libster/smart-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A production-ready React component that automatically renders the correct UI based on application state — loading, error, empty, offline, unauthorized, forbidden, notFound, maintenance, or success.",
   "author": "Vijoy Paul",
@@ -35,7 +35,12 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./styles": "./dist/styles/index.css"
+    "./styles": {
+      "types": "./dist/styles/index.d.ts",
+      "import": "./dist/styles/index.css",
+      "require": "./dist/styles/index.css",
+      "default": "./dist/styles/index.css"
+    }
   },
   "files": [
     "dist",
@@ -47,7 +52,7 @@
     "./dist/styles/index.css"
   ],
   "scripts": {
-    "build": "tsup && node scripts/prepend-use-client.mjs",
+    "build": "tsup && node scripts/postbuild.mjs",
     "build:watch": "tsup --watch",
     "dev": "vite",
     "test": "vitest run",
